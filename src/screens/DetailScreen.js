@@ -1,11 +1,11 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, SafeAreaView } from 'react-native'
 
 export default function DetailScreen() {
   
   return (
-    <View>
+    <SafeAreaView>
       <Text>You are in DetailScreen</Text>
-    </View>
+    </SafeAreaView>
   )
 }
