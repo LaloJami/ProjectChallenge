@@ -1,17 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
+import 'react-native-gesture-handler';
 import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 import { StyleSheet, Text, View } from 'react-native';
 import ListStacK from './src/components/list/ListScreen';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Open up App.js to start working on your app!</Text>
-      <Text style={styles.h2tittle}>Hello world!</Text>
-      <Text style={styles.h2tittle}>by Eduardo Jami</Text>
-      <ListStacK />
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <View style={styles.container}>
+        <Text style={styles.title}>Hello world!</Text>
+        <Text style={styles.h2tittle}>by Eduardo Jami</Text>
+        <ListStacK />
+      </View>
+    </NavigationContainer>
   );
 }
 
