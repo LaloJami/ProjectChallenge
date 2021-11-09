@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Button } from 'react-native'
+import { View, Text, Button, SafeAreaView } from 'react-native'
 
 export default function ListScreen(props) {
   const { navigation } = props;
@@ -8,9 +8,9 @@ export default function ListScreen(props) {
     navigation.navigate("Detail")
   }
   return (
-    <View>
+    <SafeAreaView>
       <Text>You are in ListScreen</Text>
       <Button onPress={goToDetail} title="Site Detail" />
-    </View>
+    </SafeAreaView>
   )
 }
