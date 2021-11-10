@@ -6,7 +6,8 @@ export default function InfoContact(props) {
     address,
     contact
   } = props;
-
+  console.log(typeof(contact[0]))
+  const contactInfo = [{phone: 'Not registered', email: 'Not Registered'}]
   return (
     <View style={styles.container}>
       <View>
@@ -15,17 +16,17 @@ export default function InfoContact(props) {
       </View>
       <Text style={styles.textLabel}>Phone: </Text>
       <View style={styles.phoneInfo}>
-        <Text style={styles.textPhoneInfo}>{contact[0].phone}</Text>
+        <Text style={styles.textPhoneInfo}>{contact.length > 0 ? contact[0].phone : contactInfo[0].phone}</Text>
         <Text style={styles.phoneInfoText}>Work</Text>
       </View>
-      {'phone_home' in contact[0] ? 
+      {(typeof(contact[0]) == 'object' && 'phone_home' in contact[0]) ? 
         <View style={styles.phoneInfo}>
           <Text style={styles.textPhoneInfo}>{contact[0].phone_home}</Text>
           <Text style={styles.phoneInfoText}>Home</Text>
         </View>: true}
       <Text style={styles.textLabel}>Email: </Text>
       <View style={styles.emailInfo}>
-        <Text style={styles.textemailInfo}>{contact[0].email}</Text>
+        <Text style={styles.textemailInfo}>{contact.length > 0 ? contact[0].email : contactInfo[0].email}</Text>
         <Text style={styles.emailInfoText}>Work</Text>
       </View>
     </View>

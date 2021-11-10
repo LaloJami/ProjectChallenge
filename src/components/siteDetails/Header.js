@@ -9,8 +9,6 @@ export default function Header(props) {
     image
   } = props;
 
-  
-  console.log(props)
   return (
     <View>
       <SafeAreaView style={styles.container}>

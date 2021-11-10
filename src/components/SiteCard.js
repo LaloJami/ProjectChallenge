@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     padding: 5
   },
   bgStyles: {
-    backgroundColor: "grey",
+    backgroundColor: "#2587be",
     flex: 1,
     flexDirection: "row",
     alignItems: 'center',
@@ -63,11 +63,13 @@ const styles = StyleSheet.create({
   cardName: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#fff'
+    // color: '#fff'
+    color: '#000'
   },
   cardAddress: {
     fontSize: 18,
-    color: '#fff',
+    // color: '#fff',
+    color: '#000',
     height: 'auto',
   }
 

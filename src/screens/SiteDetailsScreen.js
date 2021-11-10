@@ -3,6 +3,7 @@ import { ScrollView } from 'react-native'
 import { getSiteDetailsApi } from '../api/site';
 import Header from '../components/siteDetails/Header';
 import InfoContact from '../components/siteDetails/InfoContact';
+import OtherContacts from '../components/siteDetails/OtherContacts';
 
 export default function SiteDetailsScreen(props) {
   const [siteDetail, setSiteDetail] = useState(null);
@@ -27,6 +28,7 @@ export default function SiteDetailsScreen(props) {
     <ScrollView>
       <Header name={siteDetail.name} contact={siteDetail.contacts} image={siteDetail.image} />
       <InfoContact address={siteDetail.address} contact={siteDetail.contacts} />
+      {siteDetail.contacts.length > 1 ? <OtherContacts contact={siteDetail.contacts} /> : true}
     </ScrollView>
   )
 }

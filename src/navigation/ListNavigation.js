@@ -11,7 +11,7 @@ export default function ListNavigation() {
       <Stack.Screen 
         name="SitesList"
         component={ListScreen}  
-        options={{title: "Sites List"}}
+        options={{title: "", headerTransparent: true}}
       />
       <Stack.Screen 
         name="SiteDetails"
