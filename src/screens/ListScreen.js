@@ -6,7 +6,7 @@ export default function ListScreen(props) {
   const { navigation } = props;
 
   const goToDetail = () => {
-    navigation.navigate("Detail")
+    navigation.navigate("SiteDetails")
   }
   return (
     <SafeAreaView>
