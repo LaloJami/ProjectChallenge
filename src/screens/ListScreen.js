@@ -1,5 +1,6 @@
 import React from 'react'
-import { View, Text, Button, SafeAreaView } from 'react-native'
+import { Text, Button } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function ListScreen(props) {
   const { navigation } = props;
