@@ -1,11 +1,14 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image, TouchableWithoutFeedback } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
 
 export default function SiteCard(props) {
   const {site} = props;
+  const navigation = useNavigation();
 
   const goToSite = () => {
     console.log(`You going to: ${site.name}`)
+    navigation.navigate("SiteDetails", {id: site.id })
   }
 
   return (

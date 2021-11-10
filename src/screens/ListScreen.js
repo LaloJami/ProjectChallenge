@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import { Text, FlatList } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { getSitesApi } from '../api/site';
 import SiteList from '../components/SiteList';
@@ -28,7 +27,7 @@ export default function ListScreen() {
           address: siteItem.address,
           image: siteItem.image
         })
-        console.log(sitesArrays);
+        
       }
       setSites(...sites, sitesArrays);
     } catch (error) {
