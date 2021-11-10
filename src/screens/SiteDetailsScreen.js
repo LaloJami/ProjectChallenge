@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { ScrollView } from 'react-native'
 import { getSiteDetailsApi } from '../api/site';
 import Header from '../components/siteDetails/Header';
+import InfoContact from '../components/siteDetails/InfoContact';
 
 export default function SiteDetailsScreen(props) {
   const [siteDetail, setSiteDetail] = useState(null);
@@ -25,6 +26,7 @@ export default function SiteDetailsScreen(props) {
   return (
     <ScrollView>
       <Header name={siteDetail.name} contact={siteDetail.contacts} image={siteDetail.image} />
+      <InfoContact address={siteDetail.address} contact={siteDetail.contacts} />
     </ScrollView>
   )
 }
