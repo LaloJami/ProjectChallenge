@@ -37,6 +37,7 @@ export default function Favorite(props) {
   const removeFavorite = async () => {
     try {
       await removeSiteFavoriteApi(id);
+      setReloadCheck((prev) => !prev)
     } catch (error) {
       console.lof(error)
     }
