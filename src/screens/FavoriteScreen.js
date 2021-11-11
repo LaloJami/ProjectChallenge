@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, Button } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { getSiteFavoriteApi } from '../api/Favorite';
+import { getSiteFavoriteApi } from '../api/favorite';
 
 export default function FavoriteScreen() {
   const checkFavorites = async () => {
