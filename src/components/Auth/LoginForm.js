@@ -17,7 +17,7 @@ export default function LoginForm() {
       setError('')
       const {username, password} = formValue;
       if(username !== user.username || password !== user.password){
-        setError('El usuario o la contraseña no es correcto')
+        setError('Incorrect username or password.')
       } else {
         login(userDetails)
       }
@@ -60,8 +60,8 @@ function initialValues() {
 
 function validationSchema() {
   return {
-    username: Yup.string().required("El usuario debe ser obligatorio."),
-    password: Yup.string().required("La contraseña debe ser obligatorio.")
+    username: Yup.string().required("The user must be mandatory."),
+    password: Yup.string().required("The password must be mandatory.")
   }
 }
 const styles = StyleSheet.create({

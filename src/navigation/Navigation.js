@@ -14,7 +14,7 @@ export default function Navigation(params) {
         name="Favorite" 
         component={FavoriteNavigation} 
         options={{
-          tabBarLabel: "Favoritos",
+          tabBarLabel: "Favorites",
           tabBarIcon: ({color,size}) => (
             <Icon name="star" color={color} size={size} />
           )
