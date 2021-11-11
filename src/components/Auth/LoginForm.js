@@ -25,7 +25,7 @@ export default function LoginForm() {
   })
   
   return (
-    <View>
+    <View style={styles.container}>
       <Text style={styles.title}>Sign in to this Project</Text>
       <TextInput
         placeholder="User Name"
@@ -42,8 +42,9 @@ export default function LoginForm() {
         value={formik.values.password}
         onChangeText={(text)=>formik.setFieldValue('password', text)}
       />
-      <Button title="Sign in" onPress={formik.handleSubmit} />
-
+      <View style={{width: '90%'}}>
+        <Button title="Sign in" onPress={formik.handleSubmit} />
+      </View>
       <Text style={styles.error}>{formik.errors.username}</Text>
       <Text style={styles.error}>{formik.errors.password}</Text>
       <Text style={styles.error}>{error}</Text>
@@ -65,6 +66,9 @@ function validationSchema() {
   }
 }
 const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+  },
   title: {
     textAlign: "center",
     fontSize: 28,
@@ -78,6 +82,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
     borderRadius: 10,
+    width: '90%'
   },
   error: {
     textAlign: "center",
