@@ -1,11 +1,14 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image, TouchableWithoutFeedback } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
 
 export default function SiteCard(props) {
   const {site} = props;
+  const navigation = useNavigation();
 
   const goToSite = () => {
     console.log(`You going to: ${site.name}`)
+    navigation.navigate("SiteDetails", {id: site.id })
   }
 
   return (
@@ -37,7 +40,7 @@ const styles = StyleSheet.create({
     padding: 5
   },
   bgStyles: {
-    backgroundColor: "grey",
+    backgroundColor: "#2587be",
     flex: 1,
     flexDirection: "row",
     alignItems: 'center',
@@ -60,11 +63,13 @@ const styles = StyleSheet.create({
   cardName: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#fff'
+    // color: '#fff'
+    color: '#000'
   },
   cardAddress: {
     fontSize: 18,
-    color: '#fff',
+    // color: '#fff',
+    color: '#000',
     height: 'auto',
   }
 
