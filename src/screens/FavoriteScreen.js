@@ -5,6 +5,7 @@ import { getSiteFavoriteApi } from '../api/favorite';
 import useAuth from '../hooks/useAuth'
 import { getSiteDetailsApi } from '../api/site';
 import SiteList from '../components/SiteList'
+import NoLogged from '../components/NoLogged';
 
 export default function FavoriteScreen() {
   const [sites, setSites] = useState([]);
@@ -37,7 +38,7 @@ export default function FavoriteScreen() {
   )
   
   return !auth ? (
-    <Text>No login user</Text>
+    <NoLogged />
   ) : (
     <SiteList sites={sites}/>
   );
