@@ -6,7 +6,6 @@ export default function InfoContact(props) {
     address,
     contact
   } = props;
-  console.log(typeof(contact[0]))
   const contactInfo = [{phone: 'Not registered', email: 'Not Registered'}]
   return (
     <View style={styles.container}>

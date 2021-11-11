@@ -4,9 +4,7 @@ import { StyleSheet, View, Text } from 'react-native'
 export default function OtherContacts(props) {
 
   const { contact } = props;
-  console.log(contact)
   const listContact = contact.slice(1);
-  console.log(listContact)
   return (
     <View style={styles.container}>
       <View style={styles.title}>

@@ -1,13 +1,15 @@
 import React from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome5'
+import { addSiteFavoriteApi } from '../../api/Favorite';
 
 export default function Favorite(props) {
 
   const {id} = props;
 
-  const addFavorite = () => {
-    console.log(`Añadir a favoritos ${id}`)
+  const addFavorite = async () => {
+    await addSiteFavoriteApi(id);
   }
+
   return (
     <Icon 
       name="star" 
