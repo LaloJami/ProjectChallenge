@@ -14,3 +14,8 @@ The application was developed in React Native and Expo CLI. The main specificati
 ```
 API_SITES=https://the/api/path/example
 ```
+# Auth
+
+I implemented a login system and account page. Here you can find information about the user. This information can see in the file `src/utils/userDB.js`.
+
+To log in, you should type the username: `userTest` and the password: `123456`

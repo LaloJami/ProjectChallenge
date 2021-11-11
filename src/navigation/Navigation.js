@@ -16,7 +16,7 @@ export default function Navigation(params) {
         options={{
           tabBarLabel: "Favoritos",
           tabBarIcon: ({color,size}) => (
-            <Icon name="heart" color={color} size={size} />
+            <Icon name="star" color={color} size={size} />
           )
         }}
       />
