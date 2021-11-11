@@ -15,7 +15,7 @@ export default function UserData() {
         <ItemMenu title="Name" text={`${auth.firstName} ${auth.lastName}`} />
         <ItemMenu title="Username" text={`${auth.username}`} />
         <ItemMenu title="Email" text={`${auth.email}`} />
-        <ItemMenu title="Total Favorite" text={`0 pokemons`} />
+        <ItemMenu title="Total Favorite" text={`0 sites`} />
       </View>
       <Button title="Logout" onPress={logout} style={styles.btnLogoun} />
     </View>

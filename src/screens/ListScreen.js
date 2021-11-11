@@ -29,7 +29,7 @@ export default function ListScreen() {
         })
         
       }
-      setSites(...sites, sitesArrays);
+      setSites([...sites, ...sitesArrays]);
     } catch (error) {
       console.log(error);
     }
