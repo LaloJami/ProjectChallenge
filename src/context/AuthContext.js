@@ -1,5 +1,4 @@
 import React, {useState, createContext} from "react";
-import { set } from "react-native-reanimated";
 
 export const AuthContext = createContext({
   auth: undefined,

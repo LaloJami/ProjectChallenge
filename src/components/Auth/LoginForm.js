@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { View, Text, StyleSheet, TextInput, Button, Keyboard } from 'react-native'
+import { View, Text, StyleSheet, TextInput, Button } from 'react-native'
 import { useFormik } from 'formik';
 import * as Yup from "yup";
 import { user, userDetails } from '../../utils/userDB';

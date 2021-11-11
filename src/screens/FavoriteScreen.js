@@ -1,5 +1,4 @@
 import React, {useState, useCallback} from 'react'
-import { Text } from 'react-native'
 import { useFocusEffect } from '@react-navigation/native';
 import { getSiteFavoriteApi } from '../api/favorite';
 import useAuth from '../hooks/useAuth'
@@ -11,14 +10,11 @@ export default function FavoriteScreen() {
   const [sites, setSites] = useState([]);
   const { auth } = useAuth();
 
-  console.log(sites);
-
   useFocusEffect(
     useCallback(() => {
       if(auth){
         (async () =>{
           const response = await getSiteFavoriteApi();
-          console.log(response);
         
           const sitesArrays = []
           
