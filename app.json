@@ -2,6 +2,7 @@
   "expo": {
     "name": "ProjectChallenge",
     "slug": "ProjectChallenge",
+    "privacy": "public",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,6 +21,7 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.eduardojami.ProjectChallenge",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
@@ -27,6 +29,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Complete a small project to show my skills, knowledge, problem solving.",
+    "githubUrl": "https://github.com/LaloJami/ProjectChallenge.git"
   }
 }

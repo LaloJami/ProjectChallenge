@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyleSheet, View, Text } from 'react-native'
+import { pressCall } from '../../utils/functions';
 
 export default function OtherContacts(props) {
 
@@ -15,7 +16,7 @@ export default function OtherContacts(props) {
         {listContact.map((contact, index)=>(
           <View style={styles.textInfo} key={index}>
             <Text style={styles.contactName}>{contact.name}</Text>
-            <Text style={styles.phoneNumber}>{contact.phone}</Text>
+            <Text style={styles.phoneNumber} onPress={()=>pressCall(contact.phone)}>{contact.phone}</Text>
           </View>
         ))}
         
