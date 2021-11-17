@@ -14,32 +14,61 @@ export default function InfoContact(props) {
     <View style={styles.container}>
       <Text style={styles.textLabel}>Address:</Text>
       <View style={styles.address}>
-        <Text style={styles.textInfo}>{address}</Text>
         <Icon 
-          style={styles.addressIcon} 
+          style={styles.fontIcon} 
           name='map-marker' 
           size={21}
           onPress={()=>openMap(address)}
         />
+        <Text style={styles.textInfo} onPress={()=>openMap(address)}>{address}</Text>
       </View>
       <Text style={styles.textLabel}>Phone: </Text>
       <View style={styles.phoneInfo}>
         {contact.length > 0 ? (
+          <>
+          <Icon 
+            style={styles.fontIcon} 
+            name='phone' 
+            size={20}
+            onPress={()=>pressCall(contact[0].phone)}
+          />
           <Text style={styles.textPhoneInfo} onPress={()=>pressCall(contact[0].phone)}>{contact[0].phone}</Text>
+          </>
         ):(
+          <>
+          <Icon 
+            style={styles.fontIcon} 
+            name='phone' 
+            size={20}
+          />
           <Text style={styles.textPhoneInfo}>{contactInfo[0].phone}</Text>
+          </>
         )}
         <Text style={styles.phoneInfoText}>Work</Text>
       </View>
       {(typeof(contact[0]) == 'object' && 'phone_home' in contact[0]) ? 
         <View style={styles.phoneInfo}>
+          <Icon 
+            style={styles.fontIcon} 
+            name='phone' 
+            size={20}
+            onPress={()=>pressCall(contact[0].phone_home)}
+          />
           <Text style={styles.textPhoneInfo} onPress={()=>pressCall(contact[0].phone_home)} >{contact[0].phone_home}</Text>
           <Text style={styles.phoneInfoText}>Home</Text>
         </View>: true}
       <Text style={styles.textLabel}>Email: </Text>
       <View style={styles.emailInfo}>
         {contact.length > 0 ? (
+          <>
+          <Icon 
+            style={styles.fontIcon} 
+            name='envelope-o' 
+            size={20}
+            onPress={()=>pressEmail(contact[0].email)}
+          />
           <Text style={styles.textPhoneInfo} onPress={()=>pressEmail(contact[0].email)}>{contact[0].email}</Text>
+          </>
         ):(
           <Text style={styles.textPhoneInfo}>{contactInfo[0].email}</Text>
         )}
@@ -59,8 +88,8 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row'
   },
-  addressIcon: {
-    marginLeft: 15,
+  fontIcon: {
+    marginRight: 7,
     color: '#208feb'
   },
   textLabel: {

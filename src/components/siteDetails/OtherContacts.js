@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, Text } from 'react-native'
 import { pressCall } from '../../utils/functions';
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 export default function OtherContacts(props) {
 
@@ -16,7 +17,14 @@ export default function OtherContacts(props) {
         {listContact.map((contact, index)=>(
           <View style={styles.textInfo} key={index}>
             <Text style={styles.contactName}>{contact.name}</Text>
+            <View style={styles.phoneContainer}>
+            <Icon 
+              name='phone'
+              size={20}
+              onPress={()=>pressCall(contact.phone)}
+            />
             <Text style={styles.phoneNumber} onPress={()=>pressCall(contact.phone)}>{contact.phone}</Text>
+            </View>
           </View>
         ))}
         
@@ -46,6 +54,10 @@ const styles = StyleSheet.create({
     paddingTop: 5,
     marginBottom: 5,
   },
+  phoneContainer: {
+    width: '35%',
+    flexDirection: 'row'
+  },
   textInfo: {
     flexDirection: 'row',
     justifyContent: 'space-between'
@@ -55,5 +67,6 @@ const styles = StyleSheet.create({
   },
   phoneNumber: {
     paddingRight: 10,
+    marginLeft: 7
   }
 })
