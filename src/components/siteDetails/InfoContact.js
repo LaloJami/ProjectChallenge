@@ -37,7 +37,7 @@ export default function InfoContact(props) {
         ):(
           <>
           <Icon 
-            style={styles.fontIcon} 
+            style={{marginRight: 7, color: '#000'}} 
             name='phone' 
             size={20}
           />
@@ -72,7 +72,7 @@ export default function InfoContact(props) {
         ):(
           <>
           <Icon 
-            style={styles.fontIcon} 
+            style={{marginRight: 7, color: '#000'}} 
             name='envelope-o' 
             size={20}
           />
