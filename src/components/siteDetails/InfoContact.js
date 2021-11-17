@@ -70,7 +70,14 @@ export default function InfoContact(props) {
           <Text style={styles.textPhoneInfo} onPress={()=>pressEmail(contact[0].email)}>{contact[0].email}</Text>
           </>
         ):(
+          <>
+          <Icon 
+            style={styles.fontIcon} 
+            name='envelope-o' 
+            size={20}
+          />
           <Text style={styles.textPhoneInfo}>{contactInfo[0].email}</Text>
+          </>
         )}
         <Text style={styles.emailInfoText}>Work</Text>
       </View>
