@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image, TouchableWithoutFeedback } from 'react-native'
 import { useNavigation } from '@react-navigation/native';
+import ImageLoading from './ImageLoading';
 
 export default function SiteCard(props) {
   const {site} = props;
@@ -16,7 +17,7 @@ export default function SiteCard(props) {
         <View style={styles.spacing} >
           <View style={styles.bgStyles}>
             <View style={styles.styleCardImage} >
-              <Image source={{uri: site.image}} style={styles.image} />
+              <ImageLoading source={{uri: site.image}} style={styles.image} resizeMode="cover"/>
             </View>
             <View style={styles.styleCard}>
               <Text style={styles.cardName}>{site.name}</Text>

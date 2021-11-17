@@ -8,7 +8,7 @@ export default function NoLogged() {
   return (
     <View style={styles.content}>
       <Text style={styles.text}>
-        you need to sign in to see this screen
+        You need to sign in to see this screen
       </Text>
       <Button
         title="Go to Sign in"

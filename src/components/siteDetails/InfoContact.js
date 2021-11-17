@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
-import { pressCall, pressEmail } from '../../utils/functions';
+import { pressCall, pressEmail, openMap } from '../../utils/functions';
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 export default function InfoContact(props) {
   const {
@@ -11,9 +12,15 @@ export default function InfoContact(props) {
   const contactInfo = [{phone: 'Not registered', email: 'Not Registered'}]
   return (
     <View style={styles.container}>
-      <View>
-        <Text style={styles.textLabel}>Address:</Text>
+      <Text style={styles.textLabel}>Address:</Text>
+      <View style={styles.address}>
         <Text style={styles.textInfo}>{address}</Text>
+        <Icon 
+          style={styles.addressIcon} 
+          name='map-marker' 
+          size={21}
+          onPress={()=>openMap(address)}
+        />
       </View>
       <Text style={styles.textLabel}>Phone: </Text>
       <View style={styles.phoneInfo}>
@@ -47,6 +54,14 @@ const styles = StyleSheet.create({
     flex: 1,
     marginLeft: 20,
     marginTop: 10
+  },
+  address: {
+    flex: 1,
+    flexDirection: 'row'
+  },
+  addressIcon: {
+    marginLeft: 15,
+    color: '#208feb'
   },
   textLabel: {
     fontWeight: 'bold',

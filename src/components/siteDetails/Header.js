@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, Image, StyleSheet } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context';
+import ImageLoading from '../ImageLoading';
 
 export default function Header(props) {
   const {
@@ -13,7 +14,8 @@ export default function Header(props) {
     <View>
       <SafeAreaView style={styles.container}>
         <View style={styles.contentImg}>
-          <Image source={{uri: image}} style={styles.image}/>
+          {/* <Image source={{uri: image}} style={styles.image}/> */}
+          <ImageLoading source={{uri: image}} style={styles.image} resizeMode="cover"/>
         </View>
         <View style={styles.contentText}>
           <Text style={styles.textLabel} >Name</Text>
